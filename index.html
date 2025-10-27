@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Letter??</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- SPLASH SCREEN / OVERLAY -->
+  <div class="splash-overlay" id="splashOverlay">
+    <div class="splash-box">
+      <h2>How are you today?</h2>
+      <input type="text" id="answerInput" placeholder="Type your feeling..." autocomplete="off" />
+      <button class="splash-btn" onclick="hideSplash()">Submit</button>
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2024/07/04/audio_eb1ffc64b8.mp3?filename=beautiful-things-piano-222056.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Play/Pause Music">
+    <span id="musicIcon">🔈</span>
+  </button>
+
+  <div class="container">
+    <header>
+      <h1>Holaaa! 💖</h1>
+      <p class="subtitle">Ada pesan spesial untukmu hari ini ✨</p>
+    </header>
+    <main>
+      <div class="love-animation">
+        <span class="heart">💗</span>
+        <span class="heart heart2">💗</span>
+        <span class="heart heart3">💗</span>
+      </div>
+      <section class="message-box">
+        <p>
+          Semangat teruss yaa cantiik!! Iam here okay? <br/>
+          kasi tau aku kalo ada apa apa okayy, dont be shyy lovee
+        </p>
+      </section>
+      <!-- Tombol ikon hati -->
+      <button class="heart-icon-btn" onclick="showHeartModal()" aria-label="Tampilkan I Love You">
+        <svg viewBox="0 0 32 29" width="34" height="31">
+          <path d="M23.6,0c-2.7,0-5.1,1.2-6.6,3C15.5,1.2,13.1,0,10.4,0C4.7,0,0,4.7,0,10.4
+            c0,8.9,14.5,17.5,15.1,17.9c0.3,0.2,0.8,0.2,1.1,0c0.6-0.4,15.1-9,15.1-17.9C32,4.7,27.3,0,23.6,0z"
+            fill="#ff4b8e"/>
+        </svg>
+      </button>
+    </main>
+    <footer>
+      <small>Dari, <b>Siapa coba</b></small>
+    </footer>
+  </div>
+  <!-- Modal Heart Popup -->
+  <div class="heart-modal" id="heartModal" onclick="hideHeartModal(event)">
+    <div class="heart-popup">
+      <div class="love-popup-animation">
+        <span class="popup-big-heart">💖</span>
+        <div class="popup-love-text">I love youu</div>
+      </div>
+      <button class="close-modal" onclick="hideHeartModal(event,true)">Tutup</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
